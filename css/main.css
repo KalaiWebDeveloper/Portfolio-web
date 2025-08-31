@@ -33,7 +33,7 @@
   --nav-hover-color: #34b7a7; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #000000; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #444444; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #655858; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #34b7a7; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -692,6 +692,29 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+
+.home {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  background: url("img/kalaiimg/kalai icon.jpg") no-repeat center/cover;
+  /* padding: 50px; */
+}
+
+
+
+.home-img img {
+  width: 290px;   /* adjust size */
+  /* height: 700px; */
+  border-radius: 50%; /* makes it round */
+  object-fit:fill;  /* keeps aspect ratio */
+  border: 5px solid #00c2c7; /* optional border */
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  margin: 50px 0px 0px 70px;
+}
+
 .hero {
   width: 100%;
   min-height: calc(100vh - 82px);
@@ -702,26 +725,28 @@ section,
   justify-content: center;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   .hero {
     min-height: calc(100vh - 68px);
+    align-self: flex-end;
   }
 }
 
 .hero img {
   position: absolute;
-  inset: 0;
+  inset:0;
   display: block;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 
 .hero .container {
-  position: relative;
+  position: absolute;
   z-index: 3;
+  top: 100px;
 }
 
 .hero h2 {
@@ -755,7 +780,8 @@ section,
   background: color-mix(in srgb, var(--accent-color) 90%, white 20%);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  
   .hero h2 {
     font-size: 32px;
   }
